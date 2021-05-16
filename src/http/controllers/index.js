@@ -1,0 +1,1 @@
+export { LocalizationController } from './localization';
