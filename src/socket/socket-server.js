@@ -1,9 +1,9 @@
 import WebSocket from 'ws';
 import { v4 as getId } from 'uuid';
-import { ServerParams } from '../constants';
-import { handleSocketStart } from './handlers';
-import { getResponse } from './getters';
-import { removeUser } from './cleaner/remove-user';
+import { ServerParams } from '../constants.js';
+import { handleSocketStart } from './handlers.js';
+import { getResponse } from './getters/index.js';
+import { removeUser } from './cleaner/remove-user.js';
 
 const SOCKET_PARAMS = { port: ServerParams.SOCKET_PORT };
 const HEARTBEAT_INTERVAL = 60000;

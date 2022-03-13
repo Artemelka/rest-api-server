@@ -1,7 +1,7 @@
-import { MESSAGE_TYPE } from '../constants';
-import { getPongResponse } from './get-pong-response';
-import { getNewMessageResponse } from './get-new-message-response';
-import { setChatUser } from '../setters/set-chat-user';
+import { MESSAGE_TYPE } from '../constants.js';
+import { getPongResponse } from './get-pong-response.js';
+import { getNewMessageResponse } from './get-new-message-response.js';
+import { setChatUser } from '../setters/set-chat-user.js';
 
 export const getResponse = ({ message: { type, payload }, client, socket }) => {
   const params = { payload, client, socket };

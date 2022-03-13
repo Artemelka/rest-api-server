@@ -1,16 +1,16 @@
 import express from 'express';
-import { getUserName } from './get-user-name';
-import { localization } from './localization';
-import { auth } from './auth';
+import { getUserName } from './get-user-name/index.js';
+import { localization } from './localization/index.js';
+import { auth } from './auth/index.js';
 
-const routes = express.Router();
+const expressRoutes = express.Router();
 
-routes.use('/', (req, res, next) => {
+expressRoutes.use('/', (req, res, next) => {
   console.log('=== req.url ===', req.url);
   next();
 });
-routes.use('/get-user-name', getUserName);
-routes.use('/localization', localization);
-routes.use('/auth', auth);
+expressRoutes.use('/get-user-name', getUserName);
+expressRoutes.use('/localization', localization);
+expressRoutes.use('/auth', auth);
 
-module.exports = routes;
+export const routes = expressRoutes;

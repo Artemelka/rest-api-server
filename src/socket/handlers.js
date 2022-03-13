@@ -1,4 +1,4 @@
-import { ProxyParams } from "../constants";
+import { ProxyParams } from '../constants.js';
 
 export const handleSocketStart = error => error
   ? console.error('==== Socket not started! ==== ERROR:', error)

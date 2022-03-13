@@ -1,18 +1,19 @@
 import express from 'express';
 import fileUpload from 'express-fileupload';
-import reload from 'express-reload';
+// import reload from 'express-reload';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import rateLimit from 'express-rate-limit';
+import { routes } from './routes-v1/index.js';
 import {
   API_PATH,
   API_VERSIONS,
   KEEP_ALIVE_TIMEOUT,
   RELOAD_API_PATH,
   ServerParams,
-} from '../constants';
-import { handleServerStart } from './handlers';
+} from '../constants.js';
+import { handleServerStart } from './handlers.js';
 
 const { PORT, HOST } = ServerParams;
 
@@ -30,7 +31,7 @@ app.use(cors());
 app.use(cookieParser());
 app.use(express.static('dist'));
 app.get('/', (req, res) => {res.send('server running');});
-app.use(`${API_PATH}${API_VERSIONS.V1}`, reload(RELOAD_API_PATH));
+app.use(`${API_PATH}${API_VERSIONS.V1}`, routes);
 
 // http://192.168.178.27:3000
 export const startHttpServer = () => Promise.resolve(app.listen(PORT, HOST, handleServerStart)).then(server => {

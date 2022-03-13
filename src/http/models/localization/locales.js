@@ -1,7 +1,7 @@
-import mongoose, { Schema } from 'mongoose';
+import mongoose from 'mongoose';
 
 const LOCALE_COLLECTION_NAME = 'Locale';
-const localesSchema = new Schema({
+const localesSchema = new mongoose.Schema({
     enabled: Boolean,
     name: {
         required: true,

@@ -1,5 +1,5 @@
-import { MESSAGE_TYPE } from '../constants';
 import { v4 as getId } from 'uuid';
+import { MESSAGE_TYPE } from '../constants.js';
 
 const chat = [];
 

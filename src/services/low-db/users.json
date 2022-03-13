@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "isLogin": true,
+      "user": {
+        "createdAt": "",
+        "role": "user",
+        "name": "Artemelka",
+        "login": "artemelka.ru@gmail.com",
+        "id": "1"
+      }
+    },
+    {
+      "isLogin": true,
+      "user": {
+        "createdAt": "",
+        "role": "admin",
+        "name": "Artemelka-admin",
+        "login": "admin@artemelka.ru",
+        "id": "2"
+      }
+    }
+  ]
+}

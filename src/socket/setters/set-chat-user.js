@@ -1,5 +1,5 @@
-import { MESSAGE_TYPE } from '../constants';
-import { usersList } from '../db';
+import { MESSAGE_TYPE } from '../constants.js';
+import { usersList } from '../db.js';
 
 // const rooms = {};
 

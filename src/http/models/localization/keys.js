@@ -1,7 +1,7 @@
-import mongoose, { Schema } from 'mongoose';
+import mongoose from 'mongoose';
 
 const KEY_COLLECTION_NAME = 'Key';
-const keySchema = new Schema({
+const keySchema = new mongoose.Schema({
     name: {
         required: true,
         type: String,

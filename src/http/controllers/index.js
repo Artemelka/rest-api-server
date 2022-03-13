@@ -1,2 +1,2 @@
-export { AuthController } from './auth';
-export { LocalizationController } from './localization';
+export { AuthController } from './auth.js';
+export { LocalizationController } from './localization.js';

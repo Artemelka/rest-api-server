@@ -1,5 +1,5 @@
-import { handleErrorCreator } from '../handlers';
-import { KeyModel, LocaleModel } from '../models';
+import { handleErrorCreator } from '../handlers.js';
+import { KeyModel, LocaleModel } from '../models/index.js';
 
 export const LocalizationController = {
     getAllDictionary: (request, response) => {

@@ -1,2 +1,2 @@
-export { KeyModel } from './keys';
-export { LocaleModel } from './locales';
+export { KeyModel } from './keys.js';
+export { LocaleModel } from './locales.js';

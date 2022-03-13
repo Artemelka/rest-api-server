@@ -1,5 +1,5 @@
 import express from 'express';
-import { LocalizationController } from '../../controllers';
+import { LocalizationController } from '../../controllers/index.js';
 
 export const localization = express.Router();
 

@@ -1,5 +1,5 @@
-import { usersList } from '../db';
-import { MESSAGE_TYPE } from '../constants';
+import { usersList } from '../db.js';
+import { MESSAGE_TYPE } from '../constants.js';
 
 export const removeUser = ({ client, socket }) => {
   usersList.removeUser(client.id);

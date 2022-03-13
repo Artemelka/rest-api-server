@@ -1,4 +1,4 @@
-import { DB_NAME, ProxyParams } from '../constants';
+import { DB_NAME, ProxyParams } from '../constants.js';
 
 export const handleServerStart = error => error
     ? console.error('==== Server not started! ==== ERROR:', error)
