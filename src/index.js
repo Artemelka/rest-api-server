@@ -6,9 +6,6 @@ import { DB_URI, DbConnectParams } from './constants.js';
 
 mongoose.connect(DB_URI, DbConnectParams)
   .then(handleDbConnection)
+  .catch(handleDbConnectionError)
   .then(startHttpServer)
-  .then(startSocketServer)
-  .catch((error) => {
-      handleDbConnectionError(error);
-      startHttpServer();
-  });
+  .then(startSocketServer);
