@@ -5,7 +5,8 @@ export const KEEP_ALIVE_TIMEOUT = ONE_MINUTE * 2;
 export const RELOAD_API_PATH = `${path.resolve(process.cwd(), 'src/')}/http/routes-v1/`;
 export const API_PATH = '/api';
 export const API_VERSIONS ={
-    V1: '/v1'
+    V1: '/v1',
+    MOCK: '/mock',
 }
 
 export const ServerParams = {

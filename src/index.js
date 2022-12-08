@@ -8,4 +8,7 @@ mongoose.connect(DB_URI, DbConnectParams)
   .then(handleDbConnection)
   .then(startHttpServer)
   .then(startSocketServer)
-  .catch(handleDbConnectionError);
+  .catch((error) => {
+      handleDbConnectionError(error);
+      startHttpServer();
+  });
